@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "reignofsped",
+  "version": "${version}",
+  "name": "Reign Of Sped",
+  "description": "A 1.21.1 version of my 1.20.1 version mod. [To be changed Later]",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/reignofsped/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.phoenixslayer132.reignofsped.client.ReignOfSpedClient"
+    ],
+    "main": [
+      "net.phoenixslayer132.reignofsped.ReignOfSped"
+    ]
+  },
+  "mixins": [
+    "reignofsped.mixins.json",
+    {
+      "config": "reignofsped.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
