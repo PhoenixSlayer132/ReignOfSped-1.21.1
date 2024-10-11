@@ -35,7 +35,6 @@ public class SpeedScrollItem extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if (!user.getWorld().isClient() && !user.isSneaking()) {
             BlockPos blockPos = BlockPos.ofFloored(user.getPos().add(0, -1, 0));
-
             List<PlayerEntity> list = world.getEntitiesByClass(PlayerEntity.class,
                     new Box(blockPos).expand(10.0, 5.0, 10.0),
                     LivingEntity::isPlayer);
