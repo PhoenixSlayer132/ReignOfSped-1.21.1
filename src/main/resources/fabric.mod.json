@@ -18,11 +18,7 @@
     ]
   },
   "mixins": [
-    "reignofsped.mixins.json",
-    {
-      "config": "reignofsped.client.mixins.json",
-      "environment": "client"
-    }
+    "reignofsped.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",

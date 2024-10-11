@@ -4,6 +4,7 @@
   "package": "net.phoenixslayer132.reignofsped.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "scrolls.SpeedScrollMixin"
   ],
   "injectors": {
     "defaultRequire": 1

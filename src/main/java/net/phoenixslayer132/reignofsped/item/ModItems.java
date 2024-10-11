@@ -6,6 +6,7 @@ import net.minecraft.registry.Registry;
 import net.phoenixslayer132.reignofsped.ReignOfSped;
 
 import net.minecraft.util.Identifier;
+import net.phoenixslayer132.reignofsped.item.custom.items.scrolls.*;
 
 public class ModItems {
     public static final Item RAW_PHOEN = registerItem("raw_phoen",
@@ -26,6 +27,17 @@ public class ModItems {
             new Item(new Item.Settings()));
     public static final Item DAR_INGOT = registerItem("dar_ingot",
             new Item(new Item.Settings()));
+
+    public static final Item RESTORATION_SCROLL_ITEM = registerItem("restoration_scroll_item",
+            new RestorationScrollItem(new Item.Settings().maxCount(8)));
+    public static final Item STRENGTH_SCROLL_ITEM = registerItem("strength_scroll_item",
+            new StrengthScrollItem(new Item.Settings().maxCount(8)));
+    public static final Item REPAIR_SCROLL_ITEM = registerItem("repair_scroll_item",
+            new RepairScrollItem(new Item.Settings().maxCount(8)));
+    public static final Item SPEED_SCROLL_ITEM = registerItem("speed_scroll_item",
+            new SpeedScrollItem(new Item.Settings().maxCount(8)));
+    public static final Item DUPLICATION_SCROLL_ITEM = registerItem("duplication_scroll_item",
+            new DuplicationScrollItem(new Item.Settings().maxCount(8)));
 
     public static Item registerItem (String name, Item item){
     return Registry.register(Registries.ITEM, Identifier.of(ReignOfSped.MOD_ID, name), item);
