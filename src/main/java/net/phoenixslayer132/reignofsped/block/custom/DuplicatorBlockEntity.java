@@ -10,7 +10,7 @@ import net.phoenixslayer132.reignofsped.block.ModBlockEntityTypes;
 import net.phoenixslayer132.reignofsped.block.ModBlocks;
 
 public class DuplicatorBlockEntity extends BlockEntity {
-
+//
     public DuplicatorBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntityTypes.DUPLICATOR_BLOCK_ENTITY_TYPE, pos, state);
     }
