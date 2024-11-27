@@ -1,10 +1,6 @@
 package net.phoenixslayer132.reignofsped.block;
 
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.ExperienceDroppingBlock;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -12,6 +8,9 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.phoenixslayer132.reignofsped.ReignOfSped;
+import net.phoenixslayer132.reignofsped.block.custom.DuplicatorBlock;
+import net.phoenixslayer132.reignofsped.block.custom.TreasureChestBlock;
+
 
 public class ModBlocks {
     public static final Block RAW_PHOEN_BLOCK = registerBlock("raw_phoen_block",
@@ -22,6 +21,7 @@ public class ModBlocks {
             new Block(AbstractBlock.Settings.create().strength(4f).requiresTool()));
     public static final Block RAW_DAR_BLOCK = registerBlock("raw_dar_block",
             new Block(AbstractBlock.Settings.create().strength(4f).requiresTool().luminance((state) -> 1)));
+
 
     public static final Block PHOEN_ORE = registerBlock("phoen_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(4, 8),
@@ -46,6 +46,12 @@ public class ModBlocks {
                     AbstractBlock.Settings.create().strength(4f).requiresTool().luminance((state) -> 3)
                             .allowsSpawning((state, world, pos, entityType) -> entityType.isSpawnableFarFromPlayer())
                             .postProcess(Blocks::always).emissiveLighting(Blocks::always)));
+
+    public static final DuplicatorBlock DUPLICATOR_BLOCK = (DuplicatorBlock) ModBlocks.registerBlock("duplicator_block",
+            new DuplicatorBlock(AbstractBlock.Settings.create().requiresTool().strength(4f)));
+
+    public static final TreasureChestBlock TREASURE_CHEST_BLOCK = (TreasureChestBlock) ModBlocks.registerBlock("treasure_chest_block",
+            new TreasureChestBlock(AbstractBlock.Settings.create().requiresTool().strength(3f)));
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);

@@ -44,8 +44,12 @@ public class ModItemGroups {
                         entries.add(ModItems.RESTORATION_SCROLL_ITEM);
                         entries.add(ModItems.STRENGTH_SCROLL_ITEM);
                         entries.add(ModItems.REPAIR_SCROLL_ITEM);
-                        entries.add(ModItems.SPEED_SCROLL_ITEM);
+                        entries.add(ModItems.ATTACK_SPEED_SCROLL_ITEM);
+                        entries.add(ModItems.MOVEMENT_SPEED_SCROLL_ITEM);
                         entries.add(ModItems.DUPLICATION_SCROLL_ITEM);
+
+                        //Custom Blocks
+                        entries.add(ModBlocks.DUPLICATOR_BLOCK);
 
                     }).build());
 

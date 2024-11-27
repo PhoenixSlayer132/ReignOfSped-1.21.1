@@ -31,12 +31,13 @@ public class RestorationScrollItem extends Item {
                     LivingEntity:: isMobOrPlayer);
             user.sendMessage(Text.literal("You and your teammates feel your cells regenerating at a quick pace after you unfurled and activated the scroll."), true);
             for (PlayerEntity playerEntity : list){
-                if (playerEntity.getHealth() <= playerEntity.getMaxHealth()/3){
+                if (playerEntity.getHealth() <= playerEntity.getMaxHealth()/3){//if players are at < 6.7 health they heal (if the max health is 20)
                     playerEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100, 4));
                 }
             }
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100, 4));
-            user.getMainHandStack().decrement(1);
+
+            user.getMainHandStack().decrementUnlessCreative(1, user);
         }
         return super.use(world, user, hand);
     }

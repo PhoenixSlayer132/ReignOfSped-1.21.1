@@ -34,10 +34,12 @@ public class ModItems {
             new StrengthScrollItem(new Item.Settings().maxCount(8)));
     public static final Item REPAIR_SCROLL_ITEM = registerItem("repair_scroll_item",
             new RepairScrollItem(new Item.Settings().maxCount(8)));
-    public static final Item SPEED_SCROLL_ITEM = registerItem("speed_scroll_item",
-            new SpeedScrollItem(new Item.Settings().maxCount(8)));
+    public static final Item ATTACK_SPEED_SCROLL_ITEM = registerItem("attack_speed_scroll_item",
+            new AttackSpeedScrollItem(new Item.Settings().maxCount(8)));
     public static final Item DUPLICATION_SCROLL_ITEM = registerItem("duplication_scroll_item",
             new DuplicationScrollItem(new Item.Settings().maxCount(8)));
+    public static final Item MOVEMENT_SPEED_SCROLL_ITEM = registerItem("movement_speed_scroll_item",
+            new MovementSpeedScrollItem(new Item.Settings().maxCount(8)));
 
     public static Item registerItem (String name, Item item){
     return Registry.register(Registries.ITEM, Identifier.of(ReignOfSped.MOD_ID, name), item);

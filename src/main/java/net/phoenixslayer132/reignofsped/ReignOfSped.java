@@ -1,6 +1,7 @@
 package net.phoenixslayer132.reignofsped;
 
 import net.fabricmc.api.ModInitializer;
+import net.phoenixslayer132.reignofsped.block.ModBlockEntityTypes;
 import net.phoenixslayer132.reignofsped.block.ModBlocks;
 import net.phoenixslayer132.reignofsped.item.ModItemGroups;
 import net.phoenixslayer132.reignofsped.item.ModItems;
@@ -17,6 +18,7 @@ public class ReignOfSped implements ModInitializer {
     public void onInitialize() {
         ModItems.registerModItems();
         ModItemGroups.registerItemGroups();
+        ModBlockEntityTypes.registerModBlockEntityTypes();
         ModBlocks.registerModBlocks();
     }
 }
