@@ -50,6 +50,7 @@ public class ModItemGroups {
 
                         //Custom Blocks
                         entries.add(ModBlocks.DUPLICATOR_BLOCK);
+                        entries.add(ModBlocks.TREASURE_CHEST_BLOCK);
 
                     }).build());
 

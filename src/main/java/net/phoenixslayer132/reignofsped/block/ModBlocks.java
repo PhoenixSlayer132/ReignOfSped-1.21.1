@@ -51,7 +51,7 @@ public class ModBlocks {
             new DuplicatorBlock(AbstractBlock.Settings.create().requiresTool().strength(4f)));
 
     public static final TreasureChestBlock TREASURE_CHEST_BLOCK = (TreasureChestBlock) ModBlocks.registerBlock("treasure_chest_block",
-            new TreasureChestBlock(AbstractBlock.Settings.create().requiresTool().strength(3f)));
+            new TreasureChestBlock(AbstractBlock.Settings.copy(Blocks.CHEST)));
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);

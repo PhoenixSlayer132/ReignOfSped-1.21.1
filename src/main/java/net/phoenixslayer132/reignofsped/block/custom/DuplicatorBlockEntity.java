@@ -17,7 +17,6 @@ public class DuplicatorBlockEntity extends BlockEntity {
 
     public static void tick(World world, BlockPos pos, BlockState state, DuplicatorBlockEntity blockEntity) {
         if (!world.isClient()){
-            ServerTickEvents.START_SERVER_TICK.register(server -> {
                 int rng = (int) (Math.random() * (10000000 - 1 + 1)) + 1; //int between 1-10,000,000
                 int rng2 = (int) (Math.random() * (10000000 - 1 + 1)) + 1; //int between 1-10,000,000
                 int rng3 = (int) (Math.random() * (9 - 1 + 1)) + 1;//int between 1-8
@@ -68,9 +67,6 @@ public class DuplicatorBlockEntity extends BlockEntity {
                         }
                     }
                 }
-
-
-            });
         }
     }
 
